@@ -29,7 +29,7 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <form action="" method="post">
-        <div class="modal-body">
+          <div class="modal-body">
             <label for="">Nombre</label>
             <input type="text" class="form-control" name="nombre" value="" placeholder="ingresa nombre">
 
@@ -39,12 +39,12 @@
             <label for="">Fecha</label>
             <input type="date" class="form-control" name="fecha" value="">
 
-        </div>
-        <div class="modal-footer">
+          </div>
+          <div class="modal-footer">
             <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
             <button type="submit" class="btn btn-primary">Guardar</button>
-        </div>
-    </form>
+          </div>
+      </form>
     </div>
   </div>
 </div>

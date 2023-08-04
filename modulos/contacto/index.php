@@ -9,8 +9,8 @@ $contactos=$stm->fetchAll(PDO::FETCH_ASSOC);
     if(isset($_GET['id'])){
 
         $txtid=(isset($_GET['id'])?$_GET['id']:"");
-        $stm=$conexion->prepare("DELETE FROM contactos WHERE id=:txid");
-        $stm->bindParam(":txid",$txtid);
+        $stm=$conexion->prepare("DELETE FROM contactos WHERE id=:txtid");
+        $stm->bindParam(":txtid",$txtid);
         $stm->execute();
         header("location:index.php");
 
@@ -43,8 +43,8 @@ $contactos=$stm->fetchAll(PDO::FETCH_ASSOC);
                 <td><?php echo $contacto['telefono'] ?></td>
                 <td><?php echo $contacto['fecha'] ?></td>
                 <td>
-                    <a href="" class="btn btn-warning">editar</a>
-                    <a href="index.php?id=<?php echo $contacto['id'] ?>" class="btn btn-danger">eliminar</a>
+                    <a href="edit.php?id=<?php echo $contacto['id'] ?>" class="btn btn-success">Editar</a>
+                    <a href="index.php?id=<?php echo $contacto['id'] ?>" class="btn btn-danger">Eliminar</a>
                 </td>
 
             </tr>
